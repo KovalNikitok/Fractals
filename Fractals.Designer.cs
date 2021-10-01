@@ -53,12 +53,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.drawPanel);
+            // Fullsceen mode below
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Bounds = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            // Catching keystrokes
             this.KeyPreview = true;
             this.Name = "FractalForm";
             this.Text = "Фрактальное месиво";
-            this.TopMost = true;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
             this.Load += new System.EventHandler(this.FractalForm_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FractalForm_KeyPress);
             this.ResumeLayout(false);
