@@ -7,8 +7,7 @@ namespace Fractals
     class FractalsMath
     {
         /// <summary>
-        /// Method for drawing a fractal tree structure.
-        /// #FractalTree(x0, y0, length, angle); Can be used for draw fractal
+        /// Method for calculate a levy fractal structure.
         /// </summary>
         /// <param name="xA">First value of point</param>
         /// <param name="yA">Second value of point</param>
@@ -30,6 +29,14 @@ namespace Fractals
                 ConstructFractalTree((int)xB, (int)yB, (int)(length * 0.75), angle - 40, e);
             }
         }
+        /// <summary>
+        /// Method for drawing a fractal tree structure.
+        /// </summary>
+        /// <param name="screenWidth">Width of the screen</param>
+        /// <param name="screenHeight">Heigth of the screen</param>
+        /// <param name="offset">Offset of each fractal structure</param>
+        /// <param name="angle">Angle of rotation an each fractal structure</param>
+        /// <param name="e">Painter</param>
         public void FractalTree(int screenWidth, int screenHeight, int offset, int angle, PaintEventArgs e)
         {
             int width = screenWidth / 2,
@@ -48,15 +55,15 @@ namespace Fractals
                 baseAngle -= 10;
             }
         }
-            /// <summary>
-            /// Method for calculate a levy fractal structure.
-            /// </summary>
-            /// <param name="xA">First value of first point</param>
-            /// <param name="yA">Second value of first point</param>
-            /// <param name="xB">First value of second point</param>
-            /// <param name="yB">Second value of second point</param>
-            /// <param name="n">Approximation of fractal</param>
-            private void ConstructFractalLevy(float xA, float yA, float xB, float yB, int n, PaintEventArgs e)
+        /// <summary>
+        /// Method for calculate a levy fractal structure.
+        /// </summary>
+        /// <param name="xA">First value of first point</param>
+        /// <param name="yA">Second value of first point</param>
+        /// <param name="xB">First value of second point</param>
+        /// <param name="yB">Second value of second point</param>
+        /// <param name="n">Approximation of fractal</param>
+        private void ConstructFractalLevy(float xA, float yA, float xB, float yB, int n, PaintEventArgs e)
         {
             if (n == 0)
             {
@@ -73,6 +80,14 @@ namespace Fractals
                 ConstructFractalLevy(xC, yC, xB, yB, n - 1, e);
             }
         }
+        /// <summary>
+        /// Method for drawing a fractal tree structure.
+        /// </summary>
+        /// <param name="screenWidth">Width of the screen</param>
+        /// <param name="screenHeight">Heigth of the screen</param>
+        /// <param name="offset">Offset of each fractal structure</param>
+        /// <param name="e">Painter</param>
+        /// <param name="approxim">Approximation of fractal</param>
         public void FractalLevy(float screenWidth, float screenHeight, float offset, PaintEventArgs e, int approxim = 5)
         {
             float width = screenWidth / 2.0f;
@@ -89,7 +104,6 @@ namespace Fractals
                 rightOffset -= 0.02f;
             }
         }
-
         /// <summary>
         /// Method for rendering
         /// </summary>   

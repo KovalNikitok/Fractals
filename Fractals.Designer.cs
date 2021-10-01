@@ -42,11 +42,6 @@
             this.drawPanel.TabIndex = 0;
             this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // FractalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -62,16 +57,13 @@
             this.KeyPreview = true;
             this.Name = "FractalForm";
             this.Text = "Фрактальное месиво";
-            
             this.Load += new System.EventHandler(this.FractalForm_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FractalForm_KeyPress);
             this.ResumeLayout(false);
-
         }
-
         #endregion
 
-        public System.Windows.Forms.Panel drawPanel;
+        private System.Windows.Forms.Panel drawPanel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

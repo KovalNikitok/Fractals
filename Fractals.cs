@@ -9,7 +9,6 @@ namespace Fractals
         {
             InitializeComponent();
         }
-
         private void drawPanel_Paint(object sender, PaintEventArgs e)
         {
             FractalsMath fractalsMath = new FractalsMath();
@@ -18,15 +17,10 @@ namespace Fractals
         }
         private void FractalForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             switch (e.KeyChar)
             {
-                case 'q':
-                    {
-                        break;
-                    }
                 default:
-                    {
+                    {//Workpiece
                         Close();
                         break;
                     }
