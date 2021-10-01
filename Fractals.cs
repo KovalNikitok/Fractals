@@ -31,28 +31,10 @@ namespace Fractals
             Graphics graph = e.Graphics;
             graph.DrawLine(pen, xA, yA, xB, yB);
         }
-        public void FractalLevy(float xA, float yA, float xB, float yB, int n, PaintEventArgs e)
-        {
-            if (n == 0)
-            {
-                int colorR = n * 100 % 255;
-                int colorG = (colorR + 128) % 255;
-                int colorB = Math.Abs((colorR - 196)) % 255;
-                DrawFractal(new Pen(Color.FromArgb(colorR, colorG, colorB)), xA, yA, xB, yB, e);
-            }
-            else
-            {
-                float xC = (xA + xB) / 2 + (yB - yA) / 2;
-                float yC = (yA + yB) / 2 - (xB - xA) / 2;
-                FractalLevy(xA, yA, xC, yC, n - 1, e);
-                FractalLevy(xC, yC, xB, yB, n - 1, e);
-            }
-        }
+
         private void drawPanel_Paint(object sender, PaintEventArgs e)
         {
             FractalTree(drawPanel.Width / 2, 0, 250, 0, e);
-            //FractalLevy(0.4f, 0.0f, -0.4f, 0.0f, 5, e);
-
         }
         private void FractalForm_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -75,7 +57,6 @@ namespace Fractals
                     }
             }
         }
-
         private void FractalForm_Load(object sender, EventArgs e)
         {
         }
