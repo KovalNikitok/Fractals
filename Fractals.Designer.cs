@@ -71,7 +71,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel drawPanel;
+        public System.Windows.Forms.Panel drawPanel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
