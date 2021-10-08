@@ -12,6 +12,7 @@ namespace Fractals
         private void drawPanel_Paint(object sender, PaintEventArgs e)
         {
             FractalsMath fractalsMath = new FractalsMath();
+            // Draw Levy then structure by Tree fractals
             fractalsMath.FractalLevy(drawPanel.Width, drawPanel.Height, 0.3f, e, 8);
             e.Graphics.Clear(System.Drawing.Color.White);
             fractalsMath.FractalTree(drawPanel.Width, drawPanel.Height, 25, 68, e);
