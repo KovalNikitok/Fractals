@@ -7,7 +7,7 @@ namespace Fractals
     class FractalsMath
     {
         /// <summary>
-        /// Method for calculate a levy fractal structure.
+        /// Method for calculate a fractal tree structure.
         /// </summary>
         /// <param name="xA">First value of point</param>
         /// <param name="yA">Second value of point</param>
@@ -81,7 +81,7 @@ namespace Fractals
             }
         }
         /// <summary>
-        /// Method for drawing a fractal tree structure.
+        /// Method for drawing a fractal levy structure.
         /// </summary>
         /// <param name="screenWidth">Width of the screen</param>
         /// <param name="screenHeight">Heigth of the screen</param>
